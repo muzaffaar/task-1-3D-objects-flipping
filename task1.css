@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #5f2eea, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.title {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 280px;
+  height: 360px;
+  perspective: 1000px;
+}
+.card .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+.card .card-inner:hover {
+  transform: rotateY(180deg);
+}
+.card .card-inner .card-front,
+.card .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.card .card-inner .card-front {
+  background: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card .card-inner .card-front img {
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+.card .card-inner .card-front h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.card .card-inner .card-front:hover img {
+  transform: scale(1.05);
+}
+.card .card-inner .card-back {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+.card .card-inner .card-back h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.card .card-inner .card-back p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.card .card-inner .card-back .btn {
+  background: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.card .card-inner .card-back .btn:hover {
+  background: #f2f2f2;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*# sourceMappingURL=task1.css.map */
